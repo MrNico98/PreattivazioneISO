@@ -42,4 +42,6 @@ Write-Host "Fatto"
 
 Write-Host "Troverai sul desktop la cartella '&OEM&' tale cartella deve essere collogata all'interno della ISO da attivare e precisamente dentro la cartella 'sources'"
 
+Write-Host "Richiede Internet al momento dell'installazione/post-installazione"
+
 Start-Sleep -Seconds 20
