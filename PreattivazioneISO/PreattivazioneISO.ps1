@@ -8,9 +8,7 @@ Set-MpPreference -ExclusionPath "C:\Preattivazione"
 
 # Change to the desktop directory
 
-New-Item -ItemType Directory -Path C:\Preattivazione -Force
-
-cls
+New-Item -ItemType Directory -Path C:\Preattivazione -Force | out-null
 
 cd "C:\Preattivazione"
 
@@ -38,7 +36,7 @@ Remove-Item -Path "C:\Preattivazione" -Recurse -Force
 
 Start-Sleep -Seconds 3 | out-null
 
-cls
+clear
 
 Write-Host "Fatto"
 
