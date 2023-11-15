@@ -10,6 +10,8 @@ Set-MpPreference -ExclusionPath "C:\Preattivazione"
 
 New-Item -ItemType Directory -Path C:\Preattivazione -Force
 
+cls
+
 cd "C:\Preattivazione"
 
 # Download the script from GitHub
@@ -36,8 +38,10 @@ Remove-Item -Path "C:\Preattivazione" -Recurse -Force
 
 Start-Sleep -Seconds 6 | out-null
 
+cls
+
 Write-Host "Fatto"
 
 Write-Host "Troverai sul desktop la cartella '&OEM&' tale cartella deve essere collogata all'interno della ISO da attivare e precisamente dentro la cartella 'sources'"
 
-Start-Sleep -Seconds 20 | out-null
+Start-Sleep -Seconds 20
