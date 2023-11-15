@@ -36,7 +36,7 @@ cd "C:\"
 
 Remove-Item -Path "C:\Preattivazione" -Recurse -Force
 
-Start-Sleep -Seconds 6 | out-null
+Start-Sleep -Seconds 3 | out-null
 
 cls
 
