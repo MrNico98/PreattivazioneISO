@@ -33,6 +33,8 @@ Start-Process -FilePath ".\PreattivazioneISO\WinCustomizerPreattivazioneISO.cmd"
 
 Remove-Item -Path "C:\Preattivazione" -Recurse -Force
 
+Start-Sleep -Seconds 6 | out-null
+
 Write-Host: "Fatto"
 
 Start-Sleep -Seconds 20 | out-null
