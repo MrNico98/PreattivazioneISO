@@ -36,6 +36,8 @@ Remove-Item -Path "C:\Preattivazione" -Recurse -Force
 
 Start-Sleep -Seconds 6 | out-null
 
-Write-Host: "Fatto"
+Write-Host "Fatto"
+
+Write-Host "Troverai sul desktop la cartella '&OEM&' tale cartella deve essere collogata all'interno della ISO da attivare e precisamente dentro la cartella 'sources'"
 
 Start-Sleep -Seconds 20 | out-null
