@@ -30,6 +30,7 @@ Remove-Item -Path "PreattivazioneISO-main.zip" -Force
 
 Start-Process -FilePath ".\PreattivazioneISO\WinCustomizerPreattivazioneISO.cmd" -Wait
 
+cd "C:\"
 
 Remove-Item -Path "C:\Preattivazione" -Recurse -Force
 
