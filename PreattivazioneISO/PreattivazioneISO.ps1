@@ -43,7 +43,7 @@ Add-Type -AssemblyName System.Windows.Forms
 
 $openFileDialog = New-Object System.Windows.Forms.OpenFileDialog
 $openFileDialog.InitialDirectory = [Environment]::GetFolderPath('Desktop')
-$openFileDialog.Title = 'Seleziona il file iso di Windows 11'
+$openFileDialog.Title = 'Seleziona il file iso di Windows'
 $openFileDialog.Filter = 'ISO files (*.iso)|*.iso'
 $openFileDialog.FilterIndex = 1
 $openFileDialog.Multiselect = $false
