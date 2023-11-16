@@ -1370,7 +1370,7 @@ oKmV86/xZvtfE4wCtBw/FmW85rv2xwbT65RCTq50KH8rq0iWO+Yxscn0Iku4v7iogNYRtpgb8AaXAltD
 Pikmf7kUZ/nmCp18v9+n1lyp3VFyhThEgLJeVqT5v6Cz1qF7rhWLj27CUYyrdwnYvZp9Iw6d5qoWN/x2DL9pe1JnrxtUiGdvCPlbutXHyTUs6ULu"
 
 $extractedPath = "C:\OSC"
-New-Item -ItemType Directory -Path $extractedPath -Force
+New-Item -ItemType Directory -Path $extractedPath -Force | out-null
 
 # Replace with the path where you want to save the decrypted file
 $outputFilePath = "C:\OSC\oscdimg.exe"
@@ -1381,10 +1381,8 @@ $bytes = [convert]::FromBase64String($base64String)
 # Write the decoded bytes to a file
 [System.IO.File]::WriteAllBytes($outputFilePath, $bytes)
 
-Write-Host "Decryption complete. File saved at: $outputFilePath"
-
 # Mount the ISO file
-New-Item -ItemType Directory -Path "C:\ISOmount" -Force
+New-Item -ItemType Directory -Path "C:\ISOmount" -Force | out-null
 $mountResult = Mount-DiskImage -ImagePath $isoFilePath -StorageType ISO -PassThru
 $mountedVolume = $mountResult | Get-Volume
 
@@ -1403,8 +1401,7 @@ Copy-Item -Path $sourcePath -Destination $extractedPath -Recurse -Force
 $dek=[Environment]::GetFolderPath("Desktop")
 Copy-Item -Path "$dek\`$OEM`$" -Destination "$extractedPath\sources" -Recurse -Force
 
-write-host "Attendi..."
-New-Item -ItemType Directory -Path "C:\PreattivazioneISO" -Force
+New-Item -ItemType Directory -Path "C:\PreattivazioneISO" -Force | out-null
 $ISOMediaFolder = 'C:\ISOextract'
 $ISOFile = 'C:\PreattivazioneISO\ISOPreattivata.iso'
 $PathToOscdimg = 'C:\OSC'
